@@ -15,6 +15,7 @@ RUN yarn install
 
 # Bundle app source
 COPY . .
+RUN yarn build
 
-EXPOSE 3000
-CMD [ "yarn", "start" ]
+EXPOSE 5000
+CMD [ "yarn", "start:production" ]
